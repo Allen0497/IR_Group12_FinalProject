@@ -1,0 +1,6 @@
+<launch>
+
+	<node name="voice_get" pkg="robot_voice" type="voice_get" output="screen"/>
+	<node name="voice_cmd" pkg="robot_voice" type="voice_cmd" output="screen"/>
+
+</launch>
