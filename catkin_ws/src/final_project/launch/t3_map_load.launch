@@ -1,0 +1,6 @@
+<launch>
+    <!-- Set up the profile of the map -->
+    <arg name="map" default="nav.yaml" />
+    <!-- Run the map server and load the set map-->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find final_project)/map/$(arg map)" />
+</launch>

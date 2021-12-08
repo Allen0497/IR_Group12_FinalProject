@@ -1,0 +1,12 @@
+<launch>
+    <!-- run rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find final_project)/config/t7_nav.rviz"/>
+    <node pkg="joint_state_publisher" name="joint_state_publisher" type="joint_state_publisher" />
+    <node pkg="robot_state_publisher" name="robot_state_publisher" type="robot_state_publisher" />
+    <!-- Map service -->
+    <include file="$(find final_project)/launch/t3_map_load.launch" />
+    <!-- Run AMCL node -->
+    <include file="$(find final_project)/launch/t4_amcl.launch" />
+    <!-- Run move_base node -->
+    <include file="$(find final_project)/launch/t6_movebase.launch" />
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+    <!-- nav Folder can not be created -->
+    <arg name="filename" value="$(find final_project)/map/nav" />
+    <node name="map_save" pkg="map_server" type="map_saver" args="-f $(arg filename)" />
+</launch>
